@@ -1,0 +1,5 @@
+{
+  "name": "Open CaptchaWorld Narrative",
+  "description": "An interactive research narrative visualizing the Open CaptchaWorld benchmark paper, exploring the gap between Human and AI performance in solving CAPTCHAs.",
+  "requestFramePermissions": []
+}
