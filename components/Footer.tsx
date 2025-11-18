@@ -22,7 +22,9 @@ const Footer: React.FC = () => {
             <span>GitHub</span>
           </a>
           <a 
-            href="#" 
+            href="https://arxiv.org/abs/2505.24878" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white transition-colors shadow-[0_0_15px_rgba(34,197,94,0.3)]"
           >
             <FileText size={18} />

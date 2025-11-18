@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
         <div className="absolute w-96 h-96 bg-ai-500/10 rounded-full blur-3xl bottom-20 right-20 animate-pulse delay-75" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto space-y-8 pt-20">
+      <div className="relative z-10 max-w-5xl mx-auto space-y-8 pt-20">
         <div className="flex items-center justify-center gap-3 mb-4 animate-fade-in-down">
           <span className="px-3 py-1 rounded-full bg-brand-500/10 text-brand-500 text-xs font-mono tracking-wider border border-brand-500/20">
             ARXIV:2505.24878V1
@@ -21,11 +21,10 @@ const Hero: React.FC = () => {
           </span>
         </div>
 
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-white">
-          <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-tight">
+          <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-400">
             Open
-          </span>
-          <br />
+          </span>{' '}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-400 to-brand-600">
             CaptchaWorld
           </span>
@@ -45,10 +44,15 @@ const Hero: React.FC = () => {
                 <Github size={20} />
                 <span>View Code</span>
              </a>
-             <button className="flex items-center gap-2 px-6 py-3 rounded-full bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:scale-105 shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+             <a 
+                href="https://arxiv.org/abs/2505.24878"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 rounded-full bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:scale-105 shadow-[0_0_20px_rgba(34,197,94,0.3)]"
+             >
                 <FileText size={20} />
                 <span>Read Paper</span>
-             </button>
+             </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 text-left">
