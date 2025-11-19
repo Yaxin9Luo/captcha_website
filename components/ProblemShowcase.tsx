@@ -153,9 +153,9 @@ const ProblemShowcase: React.FC = () => {
                 <div className={`p-2 rounded-lg ${activeTab === item.id ? 'bg-brand-500 text-white' : 'bg-zinc-800 text-zinc-400 group-hover:text-white'}`}>
                   {item.icon}
                 </div>
-                <div>
+                <div className="flex-1 min-w-0">
                   <h3 className={`font-medium ${activeTab === item.id ? 'text-white' : 'text-zinc-400 group-hover:text-zinc-200'}`}>{item.name}</h3>
-                  <span className={`text-xs px-2 py-0.5 rounded-full mt-1 inline-block ${
+                  <span className={`text-xs px-2 py-0.5 rounded-full mt-1 inline-block whitespace-nowrap ${
                     item.difficulty === 'Hard' ? 'bg-red-500/20 text-red-400' : 
                     item.difficulty === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' : 
                     'bg-green-500/20 text-green-400'

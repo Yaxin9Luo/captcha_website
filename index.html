@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open CaptchaWorld</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -13,14 +16,21 @@
               brand: {
                 50: '#f0fdf4',
                 100: '#dcfce7',
+                400: '#4ade80', // Lighter green
                 500: '#22c55e', // Green for success/human
                 600: '#16a34a',
                 900: '#14532d',
               },
               ai: {
                 50: '#f5f3ff',
+                400: '#a78bfa', // Lighter purple
                 500: '#8b5cf6', // Purple for AI
+                600: '#7c3aed',
                 900: '#4c1d95',
+              },
+              purple: {
+                500: '#9333ea',
+                600: '#7e22ce',
               },
               dark: {
                 900: '#09090b',
@@ -54,21 +64,66 @@
       body {
         background-color: #09090b;
         color: #e4e4e7;
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+      * {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      /* Ensure proper font loading for all text elements */
+      h1, h2, h3, h4, h5, h6, p, span, div, button, a {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+      code, pre, .font-mono {
+        font-family: 'JetBrains Mono', 'Courier New', monospace;
+      }
+      /* Prevent text selection issues */
+      button, a {
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      /* Improve focus visibility for accessibility */
+      button:focus-visible, a:focus-visible {
+        outline: 2px solid #22c55e;
+        outline-offset: 2px;
+      }
+      /* Custom animations */
+      @keyframes fade-in-down {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-down {
+        animation: fade-in-down 0.6s ease-out;
+      }
+      @keyframes gradient-x {
+        0%, 100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+      .animate-gradient-x {
+        background-size: 200% 200%;
+        animation: gradient-x 3s ease infinite;
+      }
+      .delay-75 {
+        animation-delay: 75ms;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.4.1"
-  }
-}
-</script>
 </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

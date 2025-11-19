@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Bot, ShieldCheck, Github, FileText } from 'lucide-react';
+import { ArrowDown, Bot, ShieldCheck, Github, FileText, Trophy, BarChart3 } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -22,11 +22,8 @@ const Hero: React.FC = () => {
         </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-tight">
-          <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-400">
-            Open
-          </span>{' '}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-400 to-brand-600">
-            CaptchaWorld
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-brand-400 to-brand-600">
+            OpenCaptchaWorld
           </span>
         </h1>
         
@@ -34,7 +31,7 @@ const Hero: React.FC = () => {
           Benchmarking <span className="text-ai-400 font-semibold">Multimodal LLM Agents</span> against the interactive web's toughest gatekeepers.
         </p>
         
-        <div className="flex items-center justify-center gap-4 pt-4">
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
              <a 
                 href="https://github.com/MetaAgentX/OpenCaptchaWorld" 
                 target="_blank"
@@ -52,6 +49,24 @@ const Hero: React.FC = () => {
              >
                 <FileText size={20} />
                 <span>Read Paper</span>
+             </a>
+             <a 
+                href="https://captchav2-821581047530.us-central1.run.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 rounded-full bg-ai-600 hover:bg-ai-500 text-white font-medium transition-all hover:scale-105 shadow-[0_0_20px_rgba(139,92,246,0.3)]"
+             >
+                <BarChart3 size={20} />
+                <span>Try Benchmark</span>
+             </a>
+             <a 
+                href="https://huggingface.co/spaces/OpenCaptchaWorld/captchav2_prototype"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium transition-all hover:scale-105 shadow-[0_0_20px_rgba(126,34,206,0.3)]"
+             >
+                <Trophy size={20} />
+                <span>View Leaderboard</span>
              </a>
         </div>
 
