@@ -14,6 +14,11 @@ export default defineConfig(({ mode }) => {
         assetsDir: 'assets',
         sourcemap: false,
         minify: 'esbuild',
+        rollupOptions: {
+          output: {
+            manualChunks: undefined,
+          },
+        },
       },
       plugins: [react()],
       define: {
